@@ -22,7 +22,7 @@ class Shop99114Pipeline(object):
         self.cursor = self.conn.cursor()
 
     def process_item(self, item, spider):
-
+        self.conn.ping(reconnect=True)
         self.cursor.execute('''INSERT INTO shop99114(com_name, cont_name, jingyingmoshi, zhuyingyewu, loc, 
         mobile, dianhua, chuanzhen, youxiang, address) VALUES(%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)''',
         (item['com_name'], item['cont_name'], item['jingyingmoshi'], item['zhuyingyewu'], item['loc'],

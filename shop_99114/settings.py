@@ -14,6 +14,9 @@ BOT_NAME = 'shop_99114'
 SPIDER_MODULES = ['shop_99114.spiders']
 NEWSPIDER_MODULE = 'shop_99114.spiders'
 
+CONCURRENT_REQUESTS = 100
+COOKIES_ENABLED = False
+REACTOR_THREADPOOL_MAXSIZE = 40
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'shop_99114 (+http://www.yourdomain.com)'
